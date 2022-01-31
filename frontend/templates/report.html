@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block content %}
+<h1>Rapporter</h1>
+<p>
+ <table>
+    <tr>
+         <td>Byggnad</td>
+         <td>Underhåll</td>
+         <td>Kostnad</td>
+         <td>Datum</td>
+    </tr>	 
+
+     {% for row in details %}
+     <tr>
+         <td>{{ row.building_name}}</td>
+         <td>{{ row.task_name }}</td>
+         <td>{{ row.cost }}</td>
+         <td>{{ row.due_date}}</td>
+     </tr>
+     {% endfor %}
+</p>
+<p>
+ <table>
+    <tr>
+         <td>År</td>
+         <td>Kostnad per år</td>
+    </tr>	 
+
+     {% for row in year_cost%}
+     <tr>
+         <td>{{ row.year }}</td>
+         <td>{{ row.total_cost }}</td>
+     </tr>
+     {% endfor %}
+</p>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block content %}
+<h1>Fastigheter</h1>
+<h2>Registrera en ny fastighet</h2>
+<p>
+    För att kunna registrera underhållsarbeten måste minst en fastighet finnas.
+{{ wtf.quick_form(buildingform) }}
+</p>
+
+<h2>Redan registrerade fastigheter:</h2>
+<p>
+<ul>
+    {% for building in buildings %}
+        <li>
+            <p><a href="{{ url_for('task_management', building_id= building['building_id']) }}">Hantera underhåll för {{ building['name'] }}</a></p>
+        </li>
+        {% endfor %}
+</ul>
+</p>
+{% endblock %}

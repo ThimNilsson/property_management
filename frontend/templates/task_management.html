@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block content %}
+<h1>Underhållsplaner</h1>
+<h2>Registrera en nytt underhåll för {{ building.0['name'] }}</h2>
+<p>
+    {{ wtf.quick_form(form) }}
+</p>
+
+<h2>Redan registrerade underhåll:</h2>
+<p>
+<ul>
+    {% for task in tasks%}
+        <li>{{ task['description'] }}</li>
+        {% endfor %}
+</ul>
+</p>
+{% endblock %}
