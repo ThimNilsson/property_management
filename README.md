@@ -7,7 +7,9 @@ I'm just practicing API development. This will spin upp 4 containers.
 - DB Management : Adminer  
 
 The containers are placed in different networks to simulate real life network scenario. 
-The application is used for register and query maintenance plans for realestate properties.  
+The application is used for register and query maintenance plans for realestate properties. 
+
+By default the backend API will be reaced on port 5000, and the frontend will bea reached on port 80. This can be changed in the docker compose file.  
 
 ## Pre-req
 docker  
