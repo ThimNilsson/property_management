@@ -16,6 +16,7 @@ curl http://localhost:5000/api/buildings?building_id=1
 \#Load maintenance tasks  
 curl --request POST --data "building_id=1&name=byta golv&cost=50000&description=golv är slitet&due_date=2022-01-31" http://localhost:5000/api/tasks  
 curl --request POST --data "building_id=1&name=lägga om tak&cost=200000&description=tak läcker&due_date=2022-01-31" http://localhost:5000/api/tasks  
+curl --request POST --data "building_id=2&name=vvs&cost=220000&description=tak läcker&due_date=2023-01-31" http://localhost:5000/api/tasks  
 \#Query all of the maintenance tasks  
 curl http://localhost:5000/api/tasks  
 \#Query one of the maintenance tasks  
